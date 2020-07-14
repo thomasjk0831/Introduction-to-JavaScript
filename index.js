@@ -106,7 +106,63 @@ function dogFeeder(weight, age){
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-
+function rockPaperScissor(userChoice){
+   
+    var cpuChoice = Math.floor(Math.random()*3) + 1;
+ 
+    switch (cpuChoice){
+      //1 is rock
+      case 1:
+        cpuChoice = "rock"
+        if(userChoice === "rock")
+        {
+          return "Rock vs Rock. Tie!";
+        }
+        else if (userChoice === "paper")
+        {
+          return "Paper vs Rock. You win!";
+        }
+        else
+        {
+        return "Scissor vs Rock. You Lose!"
+        }
+        break;
+  
+      case 2:
+        cpuChoice = "paper"
+        if(userChoice === "rock")
+        {
+          return "Rock vs Paper. You lose!";
+        }
+        else if (userChoice === "paper")
+        {
+          return "Paper vs Paper.Tie!";
+        }
+        else
+        {
+        return "Scissor vs Paper. You Win!"
+        }
+        break;
+ 
+     case 3:
+        cpuChoice = "scissor"
+        if(userChoice === "rock")
+        {
+          return "Rock vs Scissor. You Win!";
+        }
+        else if (userChoice === "paper")
+        {
+          return "Paper vs Scissor.You Lose!";
+        }
+        else
+        {
+        return "Scissor vs Scissor.Tie!"
+        }
+        break;
+ 
+ }
+ 
+ }
   
   
 

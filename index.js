@@ -241,6 +241,19 @@ function calcGrade(grade){
 // try looking up the .includes() method
 
 
+function countVowels(word){
+    //how many vowels
+    var count = 0;
+    //convert strings to all lowercase
+    var lowerCase = word.toLowerCase();
+  
+    for(let i=0; i < lowerCase.length; i++){
+      if(lowerCase[i] === 'a' || lowerCase[i] === 'e' || lowerCase[i] === 'i' || lowerCase[i] === 'o' || lowerCase[i] === 'u')
+      count++;
+    }
+  
+    return count;
+  }
 
 
 
@@ -251,4 +264,63 @@ function calcGrade(grade){
 
 
 
+function rockPaperScissor(userChoice){
+   
+    var cpuChoice = Math.floor(Math.random()*3) + 1;
+ 
+    switch (cpuChoice){
+      //1 is rock
+      case 1:
+        cpuChoice = "rock"
+        if(userChoice === "rock")
+        {
+          return "Rock vs Rock. Tie!";
+        }
+        else if (userChoice === "paper")
+        {
+          return "Paper vs Rock. You win!";
+        }
+        else
+        {
+        return "Scissor vs Rock. You Lose!"
+        }
+        break;
+    //2 is paper
+      case 2:
+        cpuChoice = "paper"
+        if(userChoice === "rock")
+        {
+          return "Rock vs Paper. You lose!";
+        }
+        else if (userChoice === "paper")
+        {
+          return "Paper vs Paper.Tie!";
+        }
+        else
+        {
+        return "Scissor vs Paper. You Win!"
+        }
+        break;
+    //3 is scissor
+     case 3:
+        cpuChoice = "scissor"
+        if(userChoice === "rock")
+        {
+          return "Rock vs Scissor. You Win!";
+        }
+        else if (userChoice === "paper")
+        {
+          return "Paper vs Scissor.You Lose!";
+        }
+        else
+        {
+        return "Scissor vs Scissor.Tie!"
+        }
+        break;
+ 
+ }
+ 
+ }
 
+ var choice = window.prompt("enter choice: ");
+ console.log(rockPaperScissor(choice));

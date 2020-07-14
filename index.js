@@ -127,7 +127,7 @@ function rockPaperScissor(userChoice){
         return "Scissor vs Rock. You Lose!"
         }
         break;
-  
+    //2 is paper
       case 2:
         cpuChoice = "paper"
         if(userChoice === "rock")
@@ -143,7 +143,7 @@ function rockPaperScissor(userChoice){
         return "Scissor vs Paper. You Win!"
         }
         break;
- 
+    //3 is scissor
      case 3:
         cpuChoice = "scissor"
         if(userChoice === "rock")
@@ -215,7 +215,23 @@ function annoyingSong(number){
 //60s should be D 
 //and anything below 60 should be F
   
-
+function calcGrade(grade){
+    if(grade >= 90){
+      console.log("You got an A.")
+    }
+    else if (grade >= 80){
+      console.log("You got a B.")
+    }
+    else if(grade >= 70){
+      console.log("You got a C.")
+    }
+    else if (grade >= 60){
+      console.log("You got a D.")
+    }
+    else{
+      console.log("You got a F.")
+    }
+  }
   
   
 

@@ -169,13 +169,18 @@ function rockPaperScissor(userChoice){
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
+function kmToMiles(km){
+    return (km * 1000 * .000621371)
+  }
+  
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+function feetToCent(feet){
+    return (feet * 12 * 2.54)
+  }
 
 
 
@@ -184,7 +189,19 @@ function rockPaperScissor(userChoice){
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
+function annoyingSong(number){
+
+    if(number === 0){
+     console.log( "No more bottles of beer on the wall, no more bottles of beer.Go to the store and buy some more, 99 bottles of beer on the wall.");
+    }
+     else{
+    console.log( number + " bottles of soda on the wall, "+ number + " bottles of soda, take one down pass it around " + (number-1) +
+      " bottles of soda on the wall\n");
+    
+     annoyingSong(number-1);
+    }
+    
+}
 
 
 
